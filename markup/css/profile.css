@@ -1,0 +1,46 @@
+.profile__user {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--layout);
+    padding: 12px;
+    border-radius: 12px;
+    gap: 12px;
+}
+
+.profile__history {
+    margin-top: 40px;
+}
+
+.profile__history-list {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.profile__history-item {
+    background-color: var(--layout);
+    border-radius: 8px;
+    padding: 8px 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile__history-item__information {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile__actions {
+    margin-top: 40px;
+}
+
+.profile__actions-list {
+    margin-top: 24px;
+    display: flex;
+    gap: 8px;
+}

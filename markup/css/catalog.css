@@ -1,0 +1,26 @@
+.catalog__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.catalog__filter {
+    display: flex;
+}
+
+.catalog__filter-menu {
+    display: none;
+    width: 60px;
+    height: 60px;
+}
+
+@media (max-width: 1024px) {
+    .catalog__filter {
+        display: none;
+    }
+
+    .catalog__filter-menu {
+        display: block;
+    }
+}

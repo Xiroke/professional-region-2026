@@ -1,0 +1,50 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+use {{ rootNamespace }}Http\Controllers\Controller;
+use {{ namespacedRequests }}
+
+class {{ class }} extends Controller
+{
+    public function index()
+    {
+        return {{ model }}::all();
+    }
+
+    public function create()
+    {
+        return view('{{ modelVariable }}.create');
+    }
+
+    public function store({{ storeRequest }} $request)
+    {
+        $validated = $request->validated();
+        {{ model }}::create($validated);
+        return response()->noContent();
+    }
+
+    public function show({{ model }} ${{ modelVariable }})
+    {
+        return ${{ modelVariable }};
+    }
+
+    public function edit({{ model }} ${{ modelVariable }})
+    {
+        return view('{{ modelVariable }}.update', compact('{{ modelVariable }}'));
+    }
+
+    public function update({{ updateRequest }} $request, {{ model }} ${{ modelVariable }})
+    {
+        $validated = $request->validated();
+        ${{ modelVariable }}->update($validated);
+        return response()->noContent();
+    }
+
+    public function destroy({{ model }} ${{ modelVariable }})
+    {
+        ${{ modelVariable }}->delete();
+        return response()->noContent();
+    }
+}

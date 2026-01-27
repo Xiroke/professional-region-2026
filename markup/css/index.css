@@ -1,0 +1,105 @@
+.start {
+    position: relative;
+    height: 540px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8)), url("../images/new-game.png") center center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px;
+}
+
+.start__arrow-left, .start__arrow-right {
+    all: unset;
+    position: absolute;
+    cursor: pointer;
+}
+
+.start__arrow-left:hover, .start__arrow-right:hover {
+    background: none;
+}
+
+.start__arrow-left {
+    top: 45%;
+}
+
+.start__arrow-right {
+    rotate: 180deg;
+    right: 32px;
+    top: 44.5%;
+}
+
+.start__information {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 18px;
+}
+
+
+.start__description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+}
+
+.start__description h2 {
+    margin-bottom: 4px;
+    color: white    ;
+}
+
+.start__price {
+    font-weight: 600;
+    color: var(--green);
+}
+
+.advatages-list {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--layout);
+    padding: 24px 0;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.advantages__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.advantages__card__description {
+    color: var(--text-muted);
+    max-width: 300px;
+}
+
+.partners-list {
+    display: flex;
+    gap: 48px;
+    background-color: var(--layout);
+    padding: 12px;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+.search select {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .start__information {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .start .dots {
+        order: 999;
+    }
+
+    .start__information button {
+        width: 100%;
+    }
+}
