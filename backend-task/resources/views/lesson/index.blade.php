@@ -1,4 +1,4 @@
-@include('base')
+@extends('base')
 
 @section('body')
   

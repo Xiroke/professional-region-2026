@@ -22,7 +22,10 @@ class StoreLessonRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string|max:50',
+            'description' => 'required|string',
+            'video_link' => 'nullable|string|min:1|url',
+            'hours' => 'required|integer|max:4',
         ];
     }
 }
