@@ -1,0 +1,30 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: auto;
+    width: 35%;
+}
+
+.form-empty {
+    all: unset;
+}
+
+.container {
+    padding-top: 40px;
+}
+
+.back {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+}
+
+.list-page__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-page__top-actions {
+    display: flex;
+}

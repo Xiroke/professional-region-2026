@@ -20,6 +20,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'is_admin',
         'email',
         'password',
     ];
@@ -45,5 +46,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function courses()
+    {
+        return $this->belongsToMany(Course::class)->withPivot(['created_at', 'payment_status', 'id']);
     }
 }

@@ -17,6 +17,9 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(User::class);
             $table->foreignIdFor(Course::class);
+            // 0 - pending
+            // 1 - success
+            // 2 - failed
             $table->integer('payment_status');
             $table->timestamps();
         });

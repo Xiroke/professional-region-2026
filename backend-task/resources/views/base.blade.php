@@ -5,12 +5,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Онлайн обучение</title>
 </head>
 <body>
-    @section("body")
-
-    @endsection
+    <div class="container">
+        @yield('body')
+    </div>
+    <script src="/js/bootstrap.js"></script>
 </body>
 </html>

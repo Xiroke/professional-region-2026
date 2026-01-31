@@ -1,16 +1,9 @@
-@props(['name', 'value' => null])
-
-<div class="">
-    <input
-            value="{{old($name, $value)}}"
-            name="{{ $name }}"
-            {{ $attributes->class([
-            'form-control',
-            'is-invalid' => $errors->has($name)
-    ]) }}>
-    @error($name)
-    <div class="invalid-feedback">
-        {{ $message }}
+@if($errors->any())
+    <div class="alert alert-danger">
+        <ul class="mb-0">
+            @foreach($errors->all() as $error)
+                <li>{{$error}}</li>
+            @endforeach
+        </ul>
     </div>
-    @enderror
-</div>
+@endif
